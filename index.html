@@ -25,7 +25,41 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  
+  <!-- Custom CSS for Schedule Table -->
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+    .schedule-table th,
+    .schedule-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+    .schedule-table th {
+      background-color: #f7f7f7;
+      font-weight: bold;
+    }
+    .schedule-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .schedule-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .schedule-table th,
+      .schedule-table td {
+        padding: 10px;
+      }
+    }
+  </style>
   <!-- =======================================================
   * Template Name: TheEvent
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -105,7 +139,7 @@
           <h2>LLM Reasoning Workshop@ICLR2025 Schedule (28 April, 2025)</h2>
         </div>
         <div class="table-responsive">
-          <table class="table align-middle">
+          <table class="schedule-table table align-middle">
             <thead>
               <tr>
                 <th>Time (SGT)</th>
@@ -113,7 +147,6 @@
                 <th>Speaker</th>
                 <th>Talk Title</th>
                 <th>Host</th>
-                <th>Note</th>
               </tr>
             </thead>
             <tbody>
@@ -124,7 +157,6 @@
                 <td>N/A</td>
                 <td></td>
                 <td></td>
-                <td></td>
               </tr>
               <tr>
                 <td>08:40 – 09:10</td>
@@ -132,7 +164,6 @@
                 <td>Yuandong Tian (Meta)</td>
                 <td></td>
                 <td>TBD</td>
-                <td></td>
               </tr>
               <tr>
                 <td>09:10 – 09:40</td>
@@ -140,7 +171,6 @@
                 <td>Guy Van den Broeck</td>
                 <td></td>
                 <td>Jiaying Wu</td>
-                <td></td>
               </tr>
               <tr>
                 <td>09:40 – 10:10</td>
@@ -148,7 +178,6 @@
                 <td>Yarin Gal/Hongyu Ren (OpenAI)</td>
                 <td></td>
                 <td>TBD</td>
-                <td></td>
               </tr>
               <tr>
                 <td>10:10 – 10:40</td>
@@ -156,7 +185,6 @@
                 <td>Natasha Jaques (UW &amp; Google DeepMind)</td>
                 <td></td>
                 <td>Yali Du</td>
-                <td></td>
               </tr>
               <tr>
                 <td>10:40 – 11:40</td>
@@ -164,13 +192,11 @@
                 <td>All Speakers</td>
                 <td></td>
                 <td>Xidong Feng</td>
-                <td></td>
               </tr>
               <tr>
                 <td>11:40 – 13:30</td>
                 <td>Poster Session 1 and Lunch Break</td>
                 <td>/</td>
-                <td></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -180,47 +206,40 @@
                 <td>Bo An (NTU)</td>
                 <td></td>
                 <td>Yali Du</td>
-                <td></td>
               </tr>
-              <!-- contributed talk 部分：使用详细论文名称 -->
+              <!-- Oral Paper Presentation 部分 -->
               <tr>
                 <td>14:15 – 14:25</td>
-                <td>Contributed Talk 1</td>
+                <td>Oral Paper Presentation 1</td>
                 <td>TBD</td>
                 <td>126: When More is Less: Understanding Chain-of-Thought Length in LLMs</td>
                 <td>Jiaying Wu</td>
-                <td></td>
               </tr>
               <tr>
                 <td>14:25 – 14:35</td>
-                <td>Contributed Talk 2</td>
+                <td>Oral Paper Presentation 2</td>
                 <td>TBD</td>
                 <td>102: RL-STaR: Theoretical Analysis of Reinforcement Learning Frameworks for Self-Taught Reasoner</td>
                 <td>Jiaying Wu</td>
-                <td></td>
               </tr>
               <tr>
                 <td>14:35 – 14:45</td>
-                <td>Contributed Talk 3</td>
+                <td>Oral Paper Presentation 3</td>
                 <td>TBD</td>
                 <td>128: Feedback-Aware Monte Carlo Tree Search for Efficient Information Seeking in Goal-Oriented Conversations</td>
                 <td>Jiaying Wu</td>
-                <td></td>
               </tr>
               <tr>
                 <td>14:45 – 14:55</td>
-                <td>Contributed Talk 4</td>
+                <td>Oral Paper Presentation 4</td>
                 <td>TBD</td>
                 <td>147: Offline Reinforcement Learning for LLM Multi-Step Reasoning</td>
                 <td>Jiaying Wu</td>
-                <td></td>
               </tr>
-              <!-- 继续其它会议环节 -->
               <tr>
                 <td>14:55 – 16:00</td>
                 <td>Poster Session 2</td>
                 <td>/</td>
-                <td></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -230,7 +249,6 @@
                 <td>Stephen McAleer (OpenAI)</td>
                 <td></td>
                 <td>Xidong Feng</td>
-                <td></td>
               </tr>
               <tr>
                 <td>16:30 – 17:00</td>
@@ -238,31 +256,27 @@
                 <td>Junxian He (HKUST)</td>
                 <td></td>
                 <td>Bryan Hooi</td>
-                <td></td>
               </tr>
               <tr>
                 <td>17:00 – 17:10</td>
-                <td>Contributed Talk 5</td>
+                <td>Oral Paper Presentation 5</td>
                 <td>TBD</td>
                 <td>162: Rethinking Fine-tuning when Scaling Test-Time Compute: Limiting Confidence Improves Mathematical Reasoning</td>
                 <td>Xidong Feng</td>
-                <td></td>
               </tr>
               <tr>
                 <td>17:10 – 17:20</td>
-                <td>Contributed Talk 6</td>
+                <td>Oral Paper Presentation 6</td>
                 <td>TBD</td>
                 <td>158: Improving Test-Time Search for LLMs with Backtracking Against In-Context Value Verifiers</td>
                 <td>Xidong Feng</td>
-                <td></td>
               </tr>
               <tr>
                 <td>17:20 – 17:30</td>
-                <td>Contributed Talk 7</td>
+                <td>Oral Paper Presentation 7</td>
                 <td>TBD</td>
                 <td>152: s1: Simple test-time scaling</td>
                 <td>Xidong Feng</td>
-                <td></td>
               </tr>
               <tr>
                 <td>17:30 – 17:40</td>
@@ -270,7 +284,6 @@
                 <td>N/A</td>
                 <td></td>
                 <td>Zhiyuan Hu</td>
-                <td></td>
               </tr>
             </tbody>
           </table>
